@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>贾天瑞｜个人主页</title>
+  <meta name="description" content="贾天瑞｜大模型算法实习生｜深度学习 / 大语言模型 / RAG / Agent" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="top">
+        <div>
+          <h1 class="name">贾天瑞</h1>
+          <p class="subtitle">求职意向：大模型算法实习生｜研究方向：深度学习 / 大语言模型</p>
+          <div class="meta">
+            <span class="chip">📍 北京市</span>
+            <a class="chip" href="mailto:j18614269732@163.com">✉️ j18614269732@163.com</a>
+            <span class="chip">📞 (+86)18614269237</span>
+            <a class="chip" href="https://github.com/JiaTianrui1" target="_blank" rel="noreferrer">💻 GitHub: JiaTianrui1</a>
+          </div>
+          <div class="actions">
+            <a class="btn" href="assets/resume.pdf" target="_blank" rel="noreferrer">⬇️ 下载简历 PDF</a>
+            <a class="btn secondary" href="#pdf">📄 在线查看 PDF</a>
+          </div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#edu">教育经历</a>
+        <a href="#skills">技术能力</a>
+        <a href="#intern">实习经历</a>
+        <a href="#projects">项目经历</a>
+        <a href="#pubs">科研成果</a>
+        <a href="#self">自我评价</a>
+      </nav>
+
+      <div class="kv">
+        <small>提示：此页面公开展示手机号/邮箱。如需更私密，可将联系方式替换为「邮箱 + GitHub」或使用单独求职邮箱。</small>
+      </div>
+    </header>
+
+    <div class="grid">
+      <div class="card">
+        <h2 id="edu">教育经历</h2>
+
+        <div class="item-title">
+          <span>北京理工大学｜数学与应用数学｜硕士研究生（在读）</span>
+          <span class="item-sub">2024.09—至今</span>
+        </div>
+
+        <div class="item-title">
+          <span>北京理工大学｜数学与应用数学｜学士</span>
+          <span class="item-sub">2020.09—2024.06</span>
+        </div>
+        <ul>
+          <li><b>主修课程</b>：系统学习机器学习、深度学习、数学等课程。</li>
+          <li><b>荣誉奖项</b>：北京理工大学奖学金（一等奖、二等奖）；全国大学生数学竞赛省级三等奖；全国大学生英语竞赛三等奖。</li>
+        </ul>
+
+        <div class="section">
+          <h2 id="skills">技术能力与特长</h2>
+          <ul>
+            <li><b>大模型算法与微调</b>：深入理解 Transformer 架构及 Attention 机制；熟练掌握 SFT、LoRA、P-Tuning v2、Adapter 等微调技术；具备 Qwen、LLaMA、GLM 等主流模型的微调与推理优化经验。</li>
+            <li><b>RAG 与 Agent 开发</b>：熟练掌握 RAG 全链路开发（文档解析、分块策略、混合检索、Rerank）；掌握 LangChain、LlamaIndex 框架；掌握 Function Call、ReAct、CoT 等 Agent 规划策略；熟悉 Milvus、Faiss 向量数据库及 Neo4j 图数据库应用。</li>
+            <li><b>多模态与前沿架构</b>：熟悉 Diffusion Model（含 Rectified Flow）原理及应用；具备音频信号处理（EMD、频谱分析）及多模态融合（EEG+Audio+Text）建模经验。</li>
+            <li><b>框架与工程化</b>：熟练掌握 PyTorch 与 GBDT 等机器学习模型，熟悉 C++/MATLAB；掌握模型压缩（INT8/INT4 量化、剪枝、蒸馏）；熟悉 Linux 环境开发与 Docker 容器化部署。</li>
+            <li><b>英语读写能力</b>：CET-4 588，CET-6 542；具备较强的英文论文阅读与写作能力。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2 id="intern">实习经历</h2>
+
+        <div class="item-title">
+          <span>理想汽车：车载音乐个性化推荐检索排序系统｜大模型实习生</span>
+          <span class="item-sub">2025.02—至今</span>
+        </div>
+        <p class="item-sub">智能汽车群组-软件本体-理想同学-理想同学智能体部-工具生态组</p>
+        <ul>
+          <li><b>项目描述</b>：面向车机端“用户画像 + 车况上下文 + Query”的音乐推荐场景，搭建「双塔召回 → 策略过滤 → Reranker 精排」两阶段链路，实现低延迟、高精准个性化推荐。</li>
+          <li><b>数据闭环构建</b>：从零到一搭建端到端数据流，整合 11.86 万用户画像、526 万播放行为及 21.44 万歌曲库，构造约 100 万训练对；设计 InfoNCE/in-batch softmax 损失，引入曝光负样、随机负样及 Hard Negative 挖掘策略。</li>
+          <li><b>特征工程与标准化</b>：固化 Query/Item 文本 Schema（字段顺序、连续特征分桶、缺失值策略），统一 Embedding（bge-m3 / Qwen3-Embedding），批量生成 21 万+ 歌曲向量并构建 ANN 索引缓存。</li>
+          <li><b>检索增强与重排序</b>：引入 LLM（Qwen2.5-3B）进行 Query/Item 文本改写增强，构建 Top200 文本对并使用 bge-reranker-v2-m3 重排序输出 Top10；建立 Recall@K、MRR、NDCG@K 及分场景评估体系，完成 Badcase 分析闭环。</li>
+          <li><b>阶段性效果（离线/回放）</b>：相比基线模型，NDCG@10 提升 6.8%，MRR@10 提升 9.3%，Recall@200 提升至 78.4%；构建千万级向量索引（Faiss IVF-PQ），召回延迟控制在 100ms 内。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px">
+      <h2 id="projects">项目经历</h2>
+
+      <div class="item-title">
+        <span>NeurIPS 2025 Google Code Golf 锦标赛｜自动化代码压缩 Agent｜核心开发者</span>
+        <span class="item-sub">2025.09—2025.11</span>
+      </div>
+      <ul>
+        <li><b>项目描述</b>：针对 ARC-GEN 任务构建自动化代码压缩与验证框架，最终获得全球第 13 名（银牌区第 1 名）。</li>
+        <li><b>Agent 闭环设计</b>：设计基于 ARC-GEN 集成 Codex Agent 的多智能体协作流程，实现“候选解生成 → 正确性校验 → 最优解筛选”自动化闭环，累计完成 2000+ 次自动迭代。</li>
+        <li><b>提示工程与压缩策略</b>：设计 zlib + Base85 通用压缩壳并结合 Prompt 工程压缩 solver 代码，驱动 DeepSeek、GPT-5、Qwen 等多模型多轮代码逻辑重构。</li>
+        <li><b>工程落地</b>：搭建基于 GitHub Actions 的 CI/CD 流水线，实现 PR 自动合并、版本管理及 Kaggle API 自动提交。</li>
+      </ul>
+
+      <div class="item-title" style="margin-top:14px">
+        <span>EduRAG｜基于 RAG 的教育场景智能问答系统｜独立负责人</span>
+        <span class="item-sub">2025.03—2025.08</span>
+      </div>
+      <ul>
+        <li><b>项目描述</b>：从 0 到 1 构建面向教育场景的智能问答系统，整合课程、政策等多源异构知识，实现高准确率自动应答。</li>
+        <li><b>检索增强架构</b>：基于 Milvus 构建向量索引，设计 PDF/Word/PPT 多格式文档清洗与 OCR 提取流水线，累计处理 50 万+ 知识片段；实施稀疏+稠密混合检索与 BGE-Reranker 重排序策略。</li>
+        <li><b>意图识别与生成</b>：基于 Sentence-BERT 构建意图分类模型（F1=91.27%）；设计历史对话融合与 HyDE 的 Query 重写模块；利用 Qwen2.5-7B 进行指令微调，控制回答格式与幻觉。</li>
+        <li><b>部署与评估</b>：构建 RagAS 自动评估（答案相关性 0.91，忠实性 0.93），基于 1000 条标注测试集验证整体准确率 89.74%；通过 FastAPI 封装服务并上线，自动应答率达 81.56%。</li>
+      </ul>
+
+      <div class="item-title" style="margin-top:14px">
+        <span>新媒体文本评论智能分类与信息抽取系统</span>
+        <span class="item-sub">2025.01—2025.03</span>
+      </div>
+      <ul>
+        <li><b>模型微调</b>：基于 ChatGLM-6B 构建分类与抽取联合任务模型，采用 LoRA 轻量微调，提升小样本场景泛化能力。</li>
+        <li><b>数据工程</b>：主导数据全流程处理，清洗混合语料并构建高质量指令数据集（训练集 902 条/验证集 122 条）。</li>
+        <li><b>效果达成</b>：文本分类任务 F1=92.3%，SPO 三元组抽取 F1=88.7%；部署可视化演示系统，支持实时评论分析与舆情监控。</li>
+      </ul>
+    </div>
+
+    <div class="card" style="margin-top:14px">
+      <h2 id="pubs">科研成果</h2>
+      <ul>
+        <li><b>[BSPC, Q2｜已录用｜第一作者]</b> Breaking Through Data Scarcity: A Novel Diffusion Model Approach for Snoring Sound Augmentation<br/>
+          <small>创新点：提出基于扩散模型的原始波形增强框架，并首次将 Rectified Flow 应用于音频生成；构建端到端模型 RFSSDiff，并设计针对类别不平衡的数据增强策略。成果：在 MPSSC 中将 UAR 提升至 62.5%（+5.8%）。</small>
+        </li>
+        <li><b>[INTERSPEECH 2025, CCF-C｜主要贡献者]</b> Exploring EMD for Sensing the Sound of Silence: Mice Autism Detection via Ultrasonic Vocalization<br/>
+          <small>创新点：构建融合 EMD 与频谱图的多分支网络，实现超声叫声的多尺度建模与可解释特征提取。成果：验证高频 IMF1 为区分 ASD/WT 的关键声学标志；在 MADUV 上明显优于基线（p&lt;0.05）。</small>
+        </li>
+        <li><b>[IEEE JBHI, Q1 TOP｜共同一作｜在投]</b> Robust EMG Forecasting for IoT Healthcare via Adaptive Mapping &amp; Normalization-Free Transformer<br/>
+          <small>创新点：提出基于 MNN 的 EMG 分解映射，并结合 RLP-RIME 完成自动超参搜索；采用 DyT 实现无归一化时序建模。成效：R2 指标平均提升 15.5%，推理延迟降低 61.3%。</small>
+        </li>
+        <li><b>[Pattern Recognition, Q1 TOP｜学生二作｜准备投稿]</b> Bayesian Knowledge-Guided Confidence-Aware Method for Depression Detection<br/>
+          <small>创新点：提出 BLADE 框架，融合 LaBraM（EEG）与 Emo2Vec（Audio），引入贝叶斯不确定性与潜空间扩散机制。成效：在 MODMA 数据集取得 100% 被试级与 88.12% 样本级结果。</small>
+        </li>
+      </ul>
+
+      <div class="section">
+        <h2 id="self">自我评价</h2>
+        <ul>
+          <li><b>数理基础扎实</b>：数学系科班出身，对深度学习背后的优化理论、概率统计有扎实理解，能快速复现顶会论文算法。</li>
+          <li><b>全栈算法能力</b>：具备从数据清洗、模型微调（SFT/RLHF）、RAG 构建到 Agent 开发、量化部署的全链路实战经验。</li>
+          <li><b>持续学习热情</b>：密切关注 LLM 前沿动态，具备良好的英文文献阅读与技术调研能力。</li>
+          <li><b>团队协作能力</b>：沟通顺畅，能在复杂任务中主动承担责任并推动项目进展。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" id="pdf" style="margin-top:14px">
+      <h2>简历 PDF（嵌入预览）</h2>
+      <iframe class="pdf" src="assets/resume.pdf" title="Resume PDF"></iframe>
+      <div class="footer">更新日期：2026-03-03 ｜ <a href="assets/resume.pdf" target="_blank" rel="noreferrer">打开 PDF</a></div>
+    </div>
+
+    <div class="footer" style="text-align:center;margin-top:18px">
+      <small>© 2026 贾天瑞 · Hosted on GitHub Pages</small>
+    </div>
+  </div>
+</body>
+</html>
