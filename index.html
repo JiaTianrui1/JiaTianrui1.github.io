@@ -1,23 +1,10 @@
-
----
-
-## 3) index.html：完整 HTML（已加入项目链接 + 隐藏手机号）
-
-> 你之前的主页模板我保持整体风格一致，只做了三件事：  
-> 1) 删除手机号 chip  
-> 2) 在页面新增“Projects / 项目仓库”区块并挂上两个链接  
-> 3) README/个人主页信息保持可读性
-
-把你仓库根目录的 `index.html` **整体替换为下面内容**（如果你还在用我之前那套 CSS，这个能直接工作）：
-
-```html
 <!doctype html>
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>贾天瑞｜个人主页</title>
-  <meta name="description" content="贾天瑞｜大模型算法实习生｜深度学习 / 大语言模型 / RAG / Agent" />
+  <meta name="description" content="贾天瑞｜大模型算法 / 推荐检索 / Agent 方向求职者" />
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
@@ -26,55 +13,123 @@
       <div class="top">
         <div>
           <h1 class="name">贾天瑞</h1>
-          <p class="subtitle">求职意向：大模型算法实习生｜研究方向：深度学习 / 大语言模型</p>
+          <p class="subtitle">大模型算法 / 推荐检索 / Agent 方向求职者｜北京理工大学数学硕士在读</p>
 
           <div class="meta">
             <span class="chip">📍 北京市</span>
             <a class="chip" href="mailto:j18614269732@163.com">✉️ j18614269732@163.com</a>
             <a class="chip" href="https://jiatianrui1.github.io/" target="_blank" rel="noreferrer">🔗 jiatianrui1.github.io</a>
+            <a class="chip" href="https://github.com/JiaTianrui1" target="_blank" rel="noreferrer">💻 GitHub</a>
           </div>
 
           <div class="actions">
             <a class="btn" href="assets/resume.pdf" target="_blank" rel="noreferrer">⬇️ 下载简历 PDF</a>
-            <a class="btn secondary" href="#pdf">📄 在线查看 PDF</a>
+            <a class="btn secondary" href="#resume">📄 在线查看简历</a>
           </div>
         </div>
       </div>
 
       <nav>
-        <a href="#projects">项目仓库</a>
-        <a href="#pdf">简历 PDF</a>
+        <a href="#about">亮点概览</a>
+        <a href="#experience">实习经历</a>
+        <a href="#projects">公开项目</a>
+        <a href="#research">科研成果</a>
+        <a href="#resume">简历 PDF</a>
       </nav>
 
       <div class="kv">
-        <small>已隐藏手机号；如需电话可在邮件中沟通。</small>
+        <small>主页已按最新简历同步；企业内部项目仅展示项目摘要，不公开代码。</small>
       </div>
     </header>
 
     <div class="card" style="margin-top:14px">
-      <h2 id="projects">项目仓库</h2>
-
-      <div class="item-title">
-        <span>NeurIPS 2025 Google Code Golf｜自动化代码压缩 Agent</span>
-        <span class="item-sub"><a href="https://github.com/JiaTianrui1/codegolf" target="_blank" rel="noreferrer">GitHub Repo</a></span>
-      </div>
+      <h2 id="about">亮点概览</h2>
       <ul>
-        <li>自动化压缩与验证流水线，Agent 闭环（生成→验证→筛选），比赛最终全球第 13（银牌区第 1）。</li>
-      </ul>
-
-      <div class="item-title" style="margin-top:14px">
-        <span>EduRAG｜教育场景智能问答系统（RAG）</span>
-        <span class="item-sub"><a href="https://github.com/JiaTianrui1/integrated-qa-system" target="_blank" rel="noreferrer">GitHub Repo</a></span>
-      </div>
-      <ul>
-        <li>RAG 全链路：文档解析/分块、混合检索、Rerank、RagAS 评估与 FastAPI 服务化。</li>
+        <li><b>大模型算法与微调</b>：熟悉 Transformer / Attention，具备 SFT、LoRA、P-Tuning v2、Adapter 等微调经验，覆盖 Qwen、LLaMA、GLM 等主流模型。</li>
+        <li><b>RAG 与 Agent</b>：熟悉文档解析、分块、混合检索、Rerank、RagAS 评估；掌握 LangChain、LlamaIndex、Function Call、ReAct、CoT。</li>
+        <li><b>推荐检索与排序</b>：具备双塔召回、ANN 向量检索、DIN 精排、离线评估体系设计经验，关注离线指标与线上时延一致性。</li>
+        <li><b>多模态与工程化</b>：熟悉 Diffusion / Rectified Flow、音频信号处理、多模态融合；具备 PyTorch、Faiss、Milvus、FastAPI、Docker、Linux 工程经验。</li>
       </ul>
     </div>
 
-    <div class="card" id="pdf" style="margin-top:14px">
+    <div class="card" style="margin-top:14px">
+      <h2 id="experience">实习经历</h2>
+
+      <div class="item-title">
+        <span>理想汽车｜大模型实习生</span>
+        <span class="item-sub">2026.02—2026.04</span>
+      </div>
+      <p class="item-sub">智能汽车群组-软件本体-理想同学-理想同学智能体部</p>
+
+      <div class="section">
+        <div class="item-title">
+          <span>车载音乐个性化推荐检索排序系统</span>
+        </div>
+        <ul>
+          <li>面向车机端音乐个性化推荐场景，基于用户侧 Query + 用户画像 + 播放场景与歌曲侧内容特征，构建 <b>双塔召回 → ANN 粗排 → Diffusion + DIN 精排</b> 的多阶段推荐链路。</li>
+          <li>基于 <b>Qwen3-Embedding</b> 进行双塔监督微调，离线生成歌曲向量并构建 <b>Faiss IVF-PQ</b> 索引缓存，支撑千万级向量检索。</li>
+          <li>基于全参数微调 <b>Qwen2.5-1.5B</b> 做 Query/Item 文本改写增强，提升语义对齐效果。</li>
+          <li>阶段性效果：<b>NDCG@10 +6.8%</b>、<b>MRR@10 +9.3%</b>、<b>Recall@200 提升至 87.4%</b>，召回延迟稳定控制在 <b>100ms</b> 内。</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <div class="item-title">
+          <span>理想同学音乐 Agent 深度规划</span>
+        </div>
+        <ul>
+          <li>围绕搜歌、点播、推荐、切换播放模式、上下文续播等业务场景，采用 back-instruct 方法构造多步任务数据，累计合成高质量训练数据 <b>1W+</b>。</li>
+          <li>协助完成基于 <b>MCP Server</b> 的 <b>Plan-Execute</b> 规划算法设计，开展 <b>SFT、GRPO、GSPO、DAPO</b> 等多种训练方式实验。</li>
+          <li>基于 <b>eagle-3</b> 完成适配音乐 Agent 的投机解码头训练，优化车载端复杂音乐任务下的实时交互体验。</li>
+        </ul>
+      </div>
+
+      <div class="kv">
+        <small>注：以上为企业内部项目，代码未开源。</small>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px">
+      <h2 id="projects">公开项目</h2>
+
+      <div class="item-title">
+        <span>NeurIPS 2025 Google Code Golf 锦标赛｜自动化代码压缩 Agent</span>
+        <span class="item-sub"><a href="https://github.com/JiaTianrui1/codegolf" target="_blank" rel="noreferrer">GitHub Repo</a></span>
+      </div>
+      <ul>
+        <li>针对 ARC-GEN 任务构建自动化代码压缩与验证框架，最终获得全球第 13 名（银牌区第 1 名）。</li>
+        <li>设计多智能体协作闭环，实现“候选解生成 → 正确性校验 → 最优解筛选”的自动化迭代。</li>
+        <li>搭建基于 GitHub Actions 的 CI/CD 流水线，实现 PR 自动合并、版本管理及 Kaggle API 自动提交。</li>
+      </ul>
+
+      <div class="item-title" style="margin-top:14px">
+        <span>EduRAG｜基于 RAG 的教育场景智能问答系统</span>
+        <span class="item-sub"><a href="https://github.com/JiaTianrui1/integrated-qa-system" target="_blank" rel="noreferrer">GitHub Repo</a></span>
+      </div>
+      <ul>
+        <li>从 0 到 1 构建教育场景智能问答系统，整合课程、政策等多源异构知识，实现高准确率自动应答。</li>
+        <li>基于 Milvus 构建向量索引，实施稀疏 + 稠密混合检索与 BGE-Reranker 重排序。</li>
+        <li>基于 Qwen2.5-7B 进行指令微调，构建 RagAS 自动评估与 FastAPI 服务化部署。</li>
+      </ul>
+    </div>
+
+    <div class="card" style="margin-top:14px">
+      <h2 id="research">科研成果</h2>
+      <ul>
+        <li><b>[BSPC, Q2｜已录用｜第一作者]</b> Breaking Through Data Scarcity: A Novel Diffusion Model Approach for Snoring Sound Augmentation</li>
+        <li><b>[INTERSPEECH 2025, CCF-B｜主要贡献者]</b> Exploring EMD for Sensing the Sound of Silence: Mice Autism Detection via Ultrasonic Vocalization</li>
+        <li><b>[ESWA, Q1 TOP｜共同一作｜在投]</b> Robust EMG Forecasting for IoT Healthcare via Adaptive Mapping &amp; Normalization-Free Transformer</li>
+        <li><b>[Pattern Recognition, Q1 TOP｜学生二作｜大修]</b> Bayesian Knowledge-Guided Confidence-Aware Method for Depression Detection</li>
+      </ul>
+    </div>
+
+    <div class="card" id="resume" style="margin-top:14px">
       <h2>简历 PDF（嵌入预览）</h2>
       <iframe class="pdf" src="assets/resume.pdf" title="Resume PDF"></iframe>
-      <div class="footer">提示：如加载较慢可直接 <a href="assets/resume.pdf" target="_blank" rel="noreferrer">打开 PDF</a></div>
+      <div class="footer">
+        提示：如加载较慢可直接
+        <a href="assets/resume.pdf" target="_blank" rel="noreferrer">打开 PDF</a>
+      </div>
     </div>
 
     <div class="footer" style="text-align:center;margin-top:18px">
