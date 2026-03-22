@@ -59,7 +59,7 @@ Repo: https://github.com/JiaTianrui1/integrated-qa-system
 
 ## 科研成果
 - **[BSPC, Q2｜已录用｜第一作者]** Breaking Through Data Scarcity: A Novel Diffusion Model Approach for Snoring Sound Augmentation
-- **[INTERSPEECH 2025, CCF-C｜主要贡献者]** Exploring EMD for Sensing the Sound of Silence: Mice Autism Detection via Ultrasonic Vocalization
+- **[INTERSPEECH 2025, CCF-B｜主要贡献者]** Exploring EMD for Sensing the Sound of Silence: Mice Autism Detection via Ultrasonic Vocalization
 - **[ESWA, Q1 TOP｜共同一作｜在投]** Robust EMG Forecasting for IoT Healthcare via Adaptive Mapping & Normalization-Free Transformer
 - **[Pattern Recognition, Q1 TOP｜学生二作｜大修]** Bayesian Knowledge-Guided Confidence-Aware Method for Depression Detection
 
